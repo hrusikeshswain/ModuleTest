@@ -43,8 +43,20 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew
+
+      # # Run Tests Build
+      # - name: Run gradle tests
+      #   run: ./gradlew test
+
+      # Run Build Project
+      - name: Build gradle project
+        run: ./gradlew build    
       - name: Build APK
-        run: bash ./gradlew assembleDebug --stacktrace
+        run: ./gradlew assembleDebug
+      - name: Build Release APK
+        run: ./gradlew assemble  
       - name: Upload APK
         uses: actions/upload-artifact@v1
         with:

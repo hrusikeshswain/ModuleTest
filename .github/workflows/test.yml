@@ -61,15 +61,24 @@ jobs:
       # - name: Run gradle tests
       #   run: ./gradlew test
 
-      # Run Build Project
-      # - name: Build gradle project
-      #   run: ./gradlew build    
-      # - name: Build APK
-      #   run: ./gradlew assembleDebug
-      # - name: Build Release APK
-      #   run: ./gradlew assemble  
-      # - name: Upload APK
-      #   uses: actions/upload-artifact@v1
-      #   with:
-      #     name: apk
-      #     path: app/build/outputs/apk/debug/app-debug.apk       
+      Run Build Project
+      - name: Build gradle project
+        run: |
+          echo "Build gradle"
+          cd android
+          ./gradlew build    
+      - name: Build APK
+        run: |
+          echo "Assemble Debug"
+          cd android
+          ./gradlew assembleDebug
+      - name: Build Release APK
+        run: |
+          echo "Assemble"
+          cd android
+          ./gradlew assemble  
+      - name: Upload APK
+        uses: actions/upload-artifact@v1
+        with:
+          name: apk
+          path: app/build/outputs/apk/debug/app-debug.apk       

@@ -44,11 +44,17 @@ jobs:
         with:
           java-version: 1.8
       - name: Change wrapper permissions
-      - run: |
-        echo "A initial message"
-        cd android
-        chmod +x ./gradlew
-      - run: echo "One last message"    
+        run: |
+          echo "A initial message"
+          cd android
+          chmod +x ./gradlew
+    #   - run: |
+    #     echo "A initial message"
+    #     pip install -r requirements.txt
+    #     echo "Another message or command"
+    #     python myscript.py
+    #     bash some-shell-script-file.sh -xe
+    #  - run: echo "One last message"    
         # working_directory: ./android
 
       # # Run Tests Build

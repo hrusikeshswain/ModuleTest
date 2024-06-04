@@ -48,7 +48,7 @@ jobs:
         echo "A initial message"
         cd android
         chmod +x ./gradlew
-     - run: echo "One last message"    
+      - run: echo "One last message"    
         # working_directory: ./android
 
       # # Run Tests Build

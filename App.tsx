@@ -66,7 +66,7 @@ function App(): React.JSX.Element {
   // };
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
-  const [items, setItems] = useState([]);
+  // const [items, setItems] = useState([]);
 
   return (
     <SafeAreaView>

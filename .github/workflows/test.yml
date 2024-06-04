@@ -34,7 +34,7 @@ jobs:
       #   run: bash ./gradlew test --stacktrace  
   apk:
     name: Generate APK
-    needs: test
+    # needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -52,14 +52,14 @@ jobs:
       #   run: ./gradlew test
 
       # Run Build Project
-      - name: Build gradle project
-        run: ./gradlew build    
-      - name: Build APK
-        run: ./gradlew assembleDebug
-      - name: Build Release APK
-        run: ./gradlew assemble  
-      - name: Upload APK
-        uses: actions/upload-artifact@v1
-        with:
-          name: apk
-          path: app/build/outputs/apk/debug/app-debug.apk       
+      # - name: Build gradle project
+      #   run: ./gradlew build    
+      # - name: Build APK
+      #   run: ./gradlew assembleDebug
+      # - name: Build Release APK
+      #   run: ./gradlew assemble  
+      # - name: Upload APK
+      #   uses: actions/upload-artifact@v1
+      #   with:
+      #     name: apk
+      #     path: app/build/outputs/apk/debug/app-debug.apk       

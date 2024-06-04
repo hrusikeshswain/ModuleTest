@@ -61,7 +61,7 @@ jobs:
       # - name: Run gradle tests
       #   run: ./gradlew test
 
-      Run Build Project
+      # Run Build Project
       - name: Build gradle project
         run: |
           echo "Build gradle"

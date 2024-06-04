@@ -26,7 +26,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import {useState} from 'react';
-import DropDownPicker from 'react-native-dropdown-picker';
+// import DropDownPicker from 'react-native-dropdown-picker';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -71,14 +71,14 @@ function App(): React.JSX.Element {
   return (
     <SafeAreaView>
       <View>
-        <DropDownPicker
+        {/* <DropDownPicker
           open={open}
           value={null}
           items={[]}
           setOpen={setOpen}
           setValue={setValue}
           placeholder={'Choose a fruit.'}
-        />
+        /> */}
       </View>
     </SafeAreaView>
   );

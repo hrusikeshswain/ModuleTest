@@ -43,13 +43,14 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: 'zulu' # See 'Supported distributions' for available options
-          java-version: '20'
+          java-version: '17'
           cache: 'gradle'
       - name: Change wrapper permissions
         run: |
           echo "A initial message"
           cd android
           chmod +x ./gradlew
+          ./gradlew cleanBuild
           ./gradlew assembleDebug
     #   - run: |
     #     echo "A initial message"

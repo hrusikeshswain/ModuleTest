@@ -69,7 +69,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           # name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - APK(s) debug generated
-          path: android/build/outputs/apk/debug/app-debug.apk    
+          path: android/app/build/outputs/apk/debug/app-debug.apk    
         # ./gradlew --stop
          # ./gradlew cleanBuildCache
         # chmod +x ./gradlew

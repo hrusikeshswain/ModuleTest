@@ -60,6 +60,7 @@ jobs:
         run: |
             cd android
             java --version
+            yarn add @react-native-community/cli-platform-android
             ./gradlew cleanBuild
         # ./gradlew --stop
          # ./gradlew cleanBuildCache

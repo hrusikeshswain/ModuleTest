@@ -50,8 +50,8 @@ jobs:
       - name: Set Up JDK
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '21'
+          distribution: 'zulu'
+          java-version: '20'
           cache: 'gradle'
       # - name: Change wrapper permissions
       #   run: chmod +x ./gradlew
@@ -59,8 +59,9 @@ jobs:
       - name: Build gradle project
         run: |
             cd android
-            ./gradlew --stop
-            ./gradlew cleanBuildCache
+            java --version
+        # ./gradlew --stop
+         # ./gradlew cleanBuildCache
         # chmod +x ./gradlew
         # ./gradlew cleanBuild  
         # ./gradlew build      
